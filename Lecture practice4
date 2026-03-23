@@ -1,0 +1,104 @@
+#백준 2338
+A, B = map(int, input().split())
+print(A*B)
+print(A-B)
+print(A+B)
+
+--------------------------------------------------------
+
+#백준 3003
+a, b, c, d, e, f = map(int, input().split())
+print(a-1, b-1, c-2, d-2, e-2, f-6)
+
+--------------------------------------------------------
+
+#백준 3046
+R1, S = map(int, input().split())
+print(S*2-R1)
+
+--------------------------------------------------------
+
+#백준 5554
+home_school = int(input())
+school_pc = int(input())
+pc_study = int(input())
+study_home = int(input())
+print((home_school + school_pc + pc_study + study_home)//60)
+print((home_school + school_pc + pc_study + study_home)%60) 
+
+--------------------------------------------------------
+
+#백준 10430
+A, B, C = map(int, input().split())
+print((A+B)%C)
+print(((A%C) + (B%C))%C)
+print((A*B)%C)
+print(((A%C) * (B%C))%C)
+
+--------------------------------------------------------
+
+#백준 10039
+원섭 = int(input())
+세희 = int(input())
+상근 = int(input())
+숭이 = int(input())
+강수 = int(input())
+if 원섭 <= 39:
+    원섭 = 40
+if 세희 <= 39:
+    세희 = 40
+if 상근 <= 39:
+    상근 = 40
+if 숭이 <= 39:
+    숭이 = 40
+if 강수 <= 39:
+    강수 = 40
+print(int((원섭 + 세희 + 상근 + 숭이 + 강수) / 5))
+
+--------------------------------------------------------
+
+#백준 5543
+상덕버거 = int(input())
+중덕버거 = int(input())
+하덕버거 = int(input())
+콜라 = int(input())
+사이다 = int(input())
+print(min(상덕버거, 중덕버거, 하덕버거) + min(콜라, 사이다) - 50)
+
+--------------------------------------------------------
+
+#백준 1152
+word = input().split()
+print(len(word))
+
+--------------------------------------------------------
+
+#백준 2525
+A, B = map(int, input().split())
+C = int(input())
+A +=C//60
+B +=C%60
+if B>= 60:
+    A += 1
+    B -= 60
+if A>= 24:
+    A-=24
+print(A,B)
+
+--------------------------------------------------------
+
+#백준 2914
+a,b = map(int,input().split(" "))
+print(a*(b-1)+1)
+
+--------------------------------------------------------
+
+#백준 2163
+n, m = map(int, input().split())
+print(n*m-1)
+
+--------------------------------------------------------
+
+#백준 2355
+A, B = map(int, input().split())
+print((abs(A-B)+1)*(A+B)//2)
