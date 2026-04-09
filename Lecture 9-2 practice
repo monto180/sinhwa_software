@@ -1,0 +1,78 @@
+#백준 7785
+import sys
+n = int(sys.stdin.readline())
+temp = dict()
+
+for _ in range(n):
+    a, b = map(str, sys.stdin.readline().split())
+    if b == "enter":
+        temp[a] = b
+    else:
+        del temp[a]
+temp = sorted(temp.keys(), reverse=True)
+
+for i in temp:
+    print(i)
+
+---------------------------------------------------------------
+
+#백준 1764
+n, m = map(int, input().split())
+
+a= set()
+for i in range(n):
+    a.add(input())
+b=set()
+for i in range(m):
+    a.add(input())
+result=stored(list(a&b))
+print(len(result))
+for i in result:
+    print(i)
+
+  ---------------------------------------------------------------
+
+  #백준 1302
+  import sys
+from collections import defaultdict
+input = sys.stdin.readline
+
+books = defaultdict(int)
+name_list = []
+n = int(input())
+
+for _ in range(n):
+    book = input().rstrip()
+    books[book] += 1
+
+max_num = max(books.values())
+
+for book in books:
+    if books[book] == max_num:
+        name_list.append(book)
+
+name_list.sort()
+print(name_list[0])
+
+---------------------------------------------------------------
+
+#백준 10816
+
+---------------------------------------------------------------
+
+#백준 13414
+import sys
+input = sys.stdin.readline
+
+k, l = map(int, input().split())
+dict = {}
+for i in range(l):
+  dict[input().split()] = i
+
+sorted_dict = sorted(dict.items(), key=lambda x: x[1])
+
+for i in range(k):
+  if i < len(sorted_dict):
+    print(sorted_dict[i][0])
+  else:
+    break
