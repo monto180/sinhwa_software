@@ -1,0 +1,141 @@
+#백준 10818
+cnt = int(input())
+numbers = list(map(int, input().split()))
+max = numbers[0]
+min = numbers[0]
+
+for i in numbers[1:]:
+    if i > max:
+        max = i
+    elif i < min:
+        min = i
+
+print(min,max)
+
+------------------------------------------------------
+
+#백준 2562
+numbers = [int(input()) for _ in range(9)]
+
+print(max(numbers))
+print(numbers.index(max(numbers)) + 1)
+
+---------------------------------------------------------
+
+#백준 8958
+n = int(input())
+
+for _ in range(n):
+    ox_list = list(input())
+    score = 0  
+    sum_score = 0 
+    for ox in ox_list:
+        if ox == 'O':
+            score += 1  
+            sum_score += score  
+        else:
+            score = 0
+    print(sum_score)
+
+    ------------------------------------------------------
+
+    #백준 4344
+c = int(input())
+
+for i in range(c):
+    score=list(map(int, input().split()))
+    average=sum(score[1:])/score[0]
+    cnt = 0
+    for j in score[1:]:
+        if j >average:
+            cnt += 1
+    per = (cnt/score[0])*100
+    print('%.3f' %per + '%')
+    
+  ----------------------------------------------------------
+
+#백준 3052
+n = []
+for _ in range(10):
+    a=int(input())
+    b =a%42
+    n.append(b)
+s=set(n)
+print(len(s))
+
+ ----------------------------------------------------------
+
+ #백준 10773
+ import sys
+
+K = int(sys.stdin.readline())
+
+ST = []
+sum_v = 0
+
+for _ in range(K): 
+    num = int(sys.stdin.readline())  
+
+    if ST and num == 0: 
+        ST.pop() 
+    else:
+        ST.append(num)  
+
+print(sum(ST))
+
+--------------------------------------------------------
+
+#백준 9012
+T = int(input())
+
+for i in range(T):
+    stack = []
+    a=input()
+    for j in a:
+        if j == '(':
+            stack.append(j)
+        elif j == ')':
+            if stack:
+                stack.pop()
+            else:
+                print("NO")
+                break
+    else:
+        if not stack:
+            print("YES")
+        else:
+            print("NO")
+
+--------------------------------------------------------
+
+#백준 2750
+N = int(input())
+num = []
+
+for i in range(N):
+    num.append(int(input()))
+num2 = sorted(num)
+
+for i in range(len(num)):
+    print(num2[i])
+
+--------------------------------------------------------
+
+#백준 2959
+num = list(map(int, input().split()))
+
+num1 = sorted(num)
+print(min(num)*num1[-2])
+
+--------------------------------------------------------
+
+#백준 2399
+import sys
+temp=0
+n=int(input())
+nums=list(map(int,sys.stdin.readline().split()))
+
+for i in nums:
+    for value in nums:
+        temp+=abs(i-value)
+print(temp)
