@@ -1,0 +1,41 @@
+import numpy as np
+
+N = int(input())
+
+a = np.random.default_rng()
+b = np.random.default_rng()
+c = np.random.default_rng()
+
+a_t = a.integers(1, N*N*10, size = (N,N))
+b_t = b.integers(1, N*N*10, size = (N,N))
+c_t = c.integers(1, N*N*10, size = (N,N))
+d= a_t @ b_t +c_t
+
+a_tt = a.random((N,N))
+b_tt = b.random((N,N))
+c_tt = c.random((N,N))
+d_t = a_tt @ b_tt + c_tt
+
+print(d)
+print(d_t)
+
+------------------------------------------------------------------
+import numpy as np
+
+N = int(input())
+
+a = np.random.default_rng()
+b = np.random.default_rng()
+c = np.random.default_rng()
+
+a_t = a.integers(1, N*N*10, size = (N,N))
+b_t = b.integers(1, N*N*10, size = (N,N))
+c_t = c.integers(1, N*N*10, size = (N,N))
+
+a_t_t = a_t.T
+b_t_t = b_t.T
+c_t_t = c_t.T
+
+print(a_t_t)
+print(b_t_t)
+print(c_t_t)
